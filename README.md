@@ -2,55 +2,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>全螢幕雙天氣顯示</title>
+  <title>全螢幕置中天氣展示</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100vh;
-      width: 100vw;
-      background-color: #2e2e2e; /* 全螢幕深灰背景 */
+      width: 100%;
+      height: 100%;
+      background: #2e2e2e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
+      width: 90vw;
+      max-width: 1200px;
+      gap: 30px; /* 上下間距 */
     }
-    .widget-container {
+
+    .widget {
       width: 100%;
-      max-width: 1200px; /* 可依螢幕調整最大寬度 */
-      margin: 20px 0; /* 上下間距 */
+      max-width: 100%;
     }
-    .widget-container div {
-      width: 100%;
-    }
-    /* 隱藏所有 widget branding link */
-    a[id$="_u"] {
-      display: none !important;
+
+    a {
+      display: none; /* 隱藏 widget 原始連結（可選） */
     }
   </style>
 </head>
 <body>
-  <div class="widget-container">
-    <div id="ww_8e62d423d5a28" v='1.3' loc='id' a='{"t":"horizontal","lang":"zh-Hant","sl_lpl":1,"ids":["wl9238"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#2e2e2e","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
-      <a href="https://weatherwidget.org/" id="ww_8e62d423d5a28_u" target="_blank">Weather widget for website</a>
+
+  <div class="container">
+    <!-- 橫向 weather widget -->
+    <div class="widget" id="ww_a728af039000a" v='1.3' loc='id'
+      a='{
+        "t":"horizontal",
+        "lang":"en",
+        "sl_lpl":1,
+        "ids":["wl9238"],
+        "font":"Arial",
+        "sl_ics":"one_a",
+        "sl_sot":"celsius",
+        "cl_bkg":"#2e2e2e",
+        "cl_font":"#FFFFFF",
+        "cl_cloud":"#FFFFFF",
+        "cl_persp":"#81D4FA",
+        "cl_sun":"#FFC107",
+        "cl_moon":"#FFC107",
+        "cl_thund":"#FF5722"
+      }'>
+      <a href="https://weatherwidget.org/" id="ww_a728af039000a_u" target="_blank">Free weather widget</a>
+    </div>
+
+    <!-- 響應式 weather widget -->
+    <div class="widget" id="ww_ac90862dca38f" v='1.3' loc='id'
+      a='{
+        "t":"responsive",
+        "lang":"en",
+        "sl_lpl":1,
+        "ids":["wl9238"],
+        "font":"Arial",
+        "sl_ics":"one_a",
+        "sl_sot":"celsius",
+        "cl_bkg":"#2e2e2e",
+        "cl_font":"#FFFFFF",
+        "cl_cloud":"#FFFFFF",
+        "cl_persp":"#81D4FA",
+        "cl_sun":"#FFC107",
+        "cl_moon":"#FFC107",
+        "cl_thund":"#FF5722",
+        "cl_odd":"#0000000a"
+      }'>
+      <a href="https://weatherwidget.org/" id="ww_ac90862dca38f_u" target="_blank">Free weather widget</a>
     </div>
   </div>
 
-  <div class="widget-container">
-    <div id="ww_4a37cd6b892e8" v='1.3' loc='id' a='{"t":"responsive","lang":"zh-Hant","sl_lpl":1,"ids":["wl9238"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#2e2e2e","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","cl_odd":"#0000000a"}'>
-      <a href="https://weatherwidget.org/" id="ww_4a37cd6b892e8_u" target="_blank">Weather widget for website</a>
-    </div>
-  </div>
+  <!-- widget scripts -->
+  <script async src="https://app3.weatherwidget.org/js/?id=ww_a728af039000a"></script>
+  <script async src="https://app3.weatherwidget.org/js/?id=ww_ac90862dca38f"></script>
 
-  <!-- 載入兩個 widget script -->
-  <script async src="https://app3.weatherwidget.org/js/?id=ww_8e62d423d5a28"></script>
-  <script async src="https://app3.weatherwidget.org/js/?id=ww_4a37cd6b892e8"></script>
-</body>
-</html>
-
-  <!-- 載入兩個 widget script -->
-  <script async src="https://app3.weatherwidget.org/js/?id=ww_8e62d423d5a28"></script>
-  <script async src="https://app3.weatherwidget.org/js/?id=ww_4a37cd6b892e8"></script>
 </body>
 </html>
