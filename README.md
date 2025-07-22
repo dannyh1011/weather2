@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
@@ -19,6 +18,10 @@
     .widget-container {
       margin: 20px 0; /* 上下間距 */
     }
+    /* 隱藏所有 widget branding link */
+    a[id$="_u"] {
+      display: none !important;
+    }
   </style>
 </head>
 <body>
@@ -33,6 +36,12 @@
       <a href="https://weatherwidget.org/" id="ww_4a37cd6b892e8_u" target="_blank">Weather widget for website</a>
     </div>
   </div>
+
+  <!-- 載入兩個 widget script -->
+  <script async src="https://app3.weatherwidget.org/js/?id=ww_8e62d423d5a28"></script>
+  <script async src="https://app3.weatherwidget.org/js/?id=ww_4a37cd6b892e8"></script>
+</body>
+</html>
 
   <!-- 載入兩個 widget script -->
   <script async src="https://app3.weatherwidget.org/js/?id=ww_8e62d423d5a28"></script>
