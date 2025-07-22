@@ -2,21 +2,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>雙天氣小工具顯示</title>
+  <title>全螢幕雙天氣顯示</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      width: 100%;
-      background-color: #2e2e2e; /* 深灰背景 */
+      height: 100vh;
+      width: 100vw;
+      background-color: #2e2e2e; /* 全螢幕深灰背景 */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
     .widget-container {
+      width: 100%;
+      max-width: 1200px; /* 可依螢幕調整最大寬度 */
       margin: 20px 0; /* 上下間距 */
+    }
+    .widget-container div {
+      width: 100%;
     }
     /* 隱藏所有 widget branding link */
     a[id$="_u"] {
