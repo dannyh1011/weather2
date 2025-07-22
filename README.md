@@ -22,7 +22,6 @@
       align-items: center;
       width: 90vw;
       max-width: 1200px;
-      gap: 30px; /* 上下間距 */
     }
 
     .widget {
@@ -30,8 +29,16 @@
       max-width: 100%;
     }
 
-    a {
-      display: none; /* 隱藏 widget 原始連結（可選） */
+    .divider {
+      width: 100%;
+      height: 2px; /* 線條粗細 */
+      background: #ffffff; /* 白色線條 */
+      margin: 30px 0; /* 上下間距 */
+    }
+
+    /* 只隱藏 widget branding link */
+    a[id$="_u"] {
+      display: none !important;
     }
   </style>
 </head>
@@ -58,7 +65,10 @@
       }'>
       <a href="https://weatherwidget.org/" id="ww_a728af039000a_u" target="_blank">Free weather widget</a>
     </div>
-<br>
+
+    <!-- 白色區隔線 -->
+    <div class="divider"></div>
+
     <!-- 響應式 weather widget -->
     <div class="widget" id="ww_ac90862dca38f" v='1.3' loc='id'
       a='{
