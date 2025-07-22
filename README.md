@@ -78,7 +78,7 @@
         "cl_thund":"#FF5722",
         "cl_odd":"#0000000a"
       }'>
-      <a href="https://weatherwidget.org/" id="ww_ac90862dca38f_u" target="_blank">Free weather widget</a>
+      <a href="https://weatherwidget.org/" id="ww_8e62d423d5a28_u" target="_blank">Weather widget for website</a>
     </div>
   </div>
 
