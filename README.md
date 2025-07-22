@@ -30,10 +30,10 @@
     }
 
     .divider {
-      width: 100%;
-      height: 2px; /* 線條粗細 */
+      width: 100%;        /* 與 widget 寬度一致 */
+      height: 2px;        /* 白線粗細一致 */
       background: #ffffff; /* 白色線條 */
-      margin: 30px 0; /* 上下間距 */
+      margin: 30px 0;     /* 上下間距 */
     }
 
     /* 只隱藏 widget branding link */
@@ -45,6 +45,9 @@
 <body>
 
   <div class="container">
+    <!-- 上方白線 -->
+    <div class="divider"></div>
+
     <!-- 橫向 weather widget -->
     <div class="widget" id="ww_a728af039000a" v='1.3' loc='id'
       a='{
@@ -66,7 +69,7 @@
       <a href="https://weatherwidget.org/" id="ww_a728af039000a_u" target="_blank">Free weather widget</a>
     </div>
 
-    <!-- 白色區隔線 -->
+    <!-- 中間白線 -->
     <div class="divider"></div>
 
     <!-- 響應式 weather widget -->
