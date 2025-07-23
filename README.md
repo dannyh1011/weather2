@@ -24,10 +24,10 @@
       max-width: 1200px;
     }
 
-    .widget {
-      width: 100%;
-      max-width: 100%;
-    }
+   widget * {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
 
     .divider {
       width: 100%;        /* 與 widget 寬度一致 */
