@@ -13,7 +13,7 @@
       display: flex;
       justify-content: flex-start; /* 由置中改為左對齊 */
       align-items: center;
-      padding-left: 5vw; /* 左側內距，可依需求調整 */
+      padding-left: 1vw; /* 左側內距，可依需求調整 */
       box-sizing: border-box;
     }
 
