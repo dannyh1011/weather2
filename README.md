@@ -24,9 +24,11 @@
       max-width: 1200px;
     }
 
-  .widget h1, .widget hr {
-  display: none !important;
-}
+    .widget {
+      width: 100%;
+      max-width: 100%;
+    }
+
     .divider {
       width: 100%;        /* 與 widget 寬度一致 */
       height: 2px;        /* 白線粗細一致 */
@@ -34,9 +36,24 @@
       margin: 30px 0;     /* 上下間距 */
     }
 
-    /* 只隱藏 widget branding link */
+    /* 隱藏 weather2 標題與下方白線，如在 HTML 中 */
+    h1, hr {
+      display: none !important;
+    }
+
+    /* 隱藏 widget branding link */
     a[id$="_u"] {
       display: none !important;
+    }
+
+    /* 移除 widget 內部底線、邊框、陰影，如有 */
+    .widget * {
+      border-bottom: none !important;
+      box-shadow: none !important;
+    }
+
+    .widget iframe {
+      border: none !important;
     }
   </style>
 </head>
