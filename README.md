@@ -1,19 +1,24 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>全螢幕置中天氣展示</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>全螢幕偏左天氣展示</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       width: 100%;
       height: 100%;
-      /* 背景改為與 widget 相同，使用黑色作為初始 fallback */
       background: black;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start; /* 由置中改為左對齊 */
       align-items: center;
+      padding-left: 5vw; /* 左側內距，可依需求調整 */
+      box-sizing: border-box;
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
     }
 
     .container {
@@ -31,18 +36,16 @@
     }
 
     .divider {
-      width: 100%;        /* 與 widget 寬度一致 */
-      height: 2px;        /* 白線粗細一致 */
-      background: #ffffff; /* 白色線條 */
-      margin: 30px 0;     /* 上下間距 */
+      width: 100%;
+      height: 2px;
+      background: #ffffff;
+      margin: 30px 0;
     }
 
-    /* 隱藏 widget branding link */
     a[id$="_u"] {
       display: none !important;
     }
 
-    /* 移除 widget 內部底線、邊框、陰影，如有 */
     .widget * {
       border-bottom: none !important;
       box-shadow: none !important;
@@ -56,10 +59,8 @@
 <body>
 
   <div class="container">
-    <!-- 上方白線 -->
     <div class="divider"></div>
 
-    <!-- 上方 weather widget -->
     <div class="widget" id="ww_03524cc90608a" v='1.3' loc='id'
       a='{
         "t":"horizontal",
@@ -80,10 +81,8 @@
       <a href="https://weatherwidget.org/" id="ww_03524cc90608a_u" target="_blank">Free weather widget</a>
     </div>
 
-    <!-- 中間白線 -->
     <div class="divider"></div>
 
-    <!-- 下方 weather widget -->
     <div class="widget" id="ww_04509b4286730" v='1.3' loc='id'
       a='{
         "t":"responsive",
@@ -105,9 +104,8 @@
     </div>
   </div>
 
-  <!-- widget scripts -->
-  <script async src="https://app3.weatherwidget.org/js/?id=ww_03524cc90608a"></script>
-  <script async src="https://app3.weatherwidget.org/js/?id=ww_04509b4286730"></script>
+  <script defer src="https://app3.weatherwidget.org/js/?id=ww_03524cc90608a"></script>
+  <script defer src="https://app3.weatherwidget.org/js/?id=ww_04509b4286730"></script>
 
 </body>
 </html>
