@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>全螢幕偏左天氣展示</title>
+  <title>全螢幕天氣展示（最終校正版本）</title>
   <style>
     html, body {
       margin: 0;
@@ -11,9 +11,8 @@
       height: 100%;
       background: black;
       display: flex;
-      justify-content: flex-start; /* 由置中改為左對齊 */
-      align-items: center;
-      padding-left: 1vw; /* 左側內距，可依需求調整 */
+      justify-content: center;  /* 水平置中 */
+      align-items: center;      /* 垂直置中 */
       box-sizing: border-box;
     }
 
@@ -26,7 +25,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 90vw;
+      width: 85vw;        /* 適中寬度，避免太寬視覺偏右 */
       max-width: 1200px;
     }
 
@@ -59,8 +58,10 @@
 <body>
 
   <div class="container">
+    <!-- 上方白線 -->
     <div class="divider"></div>
 
+    <!-- 上方 weather widget -->
     <div class="widget" id="ww_03524cc90608a" v='1.3' loc='id'
       a='{
         "t":"horizontal",
@@ -81,8 +82,10 @@
       <a href="https://weatherwidget.org/" id="ww_03524cc90608a_u" target="_blank">Free weather widget</a>
     </div>
 
+    <!-- 中間白線 -->
     <div class="divider"></div>
 
+    <!-- 下方 weather widget -->
     <div class="widget" id="ww_04509b4286730" v='1.3' loc='id'
       a='{
         "t":"responsive",
@@ -104,8 +107,10 @@
     </div>
   </div>
 
+  <!-- widget scripts -->
   <script defer src="https://app3.weatherwidget.org/js/?id=ww_03524cc90608a"></script>
   <script defer src="https://app3.weatherwidget.org/js/?id=ww_04509b4286730"></script>
 
 </body>
 </html>
+
