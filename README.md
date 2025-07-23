@@ -24,11 +24,9 @@
       max-width: 1200px;
     }
 
-   widget * {
-  border-bottom: none !important;
-  box-shadow: none !important;
+  .widget h1, .widget hr {
+  display: none !important;
 }
-
     .divider {
       width: 100%;        /* 與 widget 寬度一致 */
       height: 2px;        /* 白線粗細一致 */
