@@ -52,7 +52,9 @@
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
-<br><br><br>
+<!-- 中間白線 -->
+    <div class="divider"></div>
+
     <!-- 松山機場 -->
     <div class="map">
       <div class="label">Songshan Airport</div>
