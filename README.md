@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>全螢幕影片播放</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>影片播放</title>
   <style>
     html, body {
       margin: 0;
@@ -18,9 +17,6 @@
       left: 50%;
       min-width: 100%;
       min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: -1;
       transform: translate(-50%, -50%);
       object-fit: cover;
     }
@@ -28,8 +24,8 @@
 </head>
 <body>
   <video autoplay muted loop playsinline>
-    <source src="wv1.mp4" type="video/mp4">
-    您的瀏覽器不支援 HTML5 影片播放。
+    <source src="video.mp4" type="video/mp4">
+    您的瀏覽器不支援影片播放
   </video>
 </body>
 </html>
