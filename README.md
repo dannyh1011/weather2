@@ -11,6 +11,9 @@
       background-color: black;
       font-family: sans-serif;
     }
+ h1, hr {
+      display: none !important;
+    }
     .container {
       display: flex;
       height: 100vh;
