@@ -60,8 +60,8 @@
     <!-- 上方白線 -->
     <div class="divider"></div>
 
-    <!-- 更新後的上方 widget -->
-    <div class="widget" id="ww_ccc8f6867fffd" v='1.3' loc='auto'
+    <!-- 新的上方 widget -->
+    <div class="widget" id="ww_ccc8f6867fffd" v='1.3' loc='id'
       a='{
         "t":"horizontal",
         "lang":"en",
@@ -78,8 +78,7 @@
         "cl_moon":"#FFC107",
         "cl_thund":"#FF5722"
       }'>
-      Weather Data Source: 
-      <a href="https://wetterlang.de" id="ww_ccc8f6867fffd_u" target="_blank">Wettervorhersage 30 tage</a>
+      <a href="https://weatherwidget.org/" id="ww_ccc8f6867fffd_u" target="_blank">Html weather widget</a>
     </div>
 
     <!-- 中間白線 -->
@@ -113,4 +112,4 @@
   <script async src="https://app3.weatherwidget.org/js/?id=ww_ac90862dca38f"></script>
 
 </body>
-</html>>
+</html>
