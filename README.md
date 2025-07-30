@@ -1,74 +1,118 @@
-
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <title>Traffic to Airports from Sol Hotel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>全螢幕置中天氣展示</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      background-color: black;
-      font-family: sans-serif;
-    }
- h1, hr {
-      display: none !important;
-    }
-    .container {
-      display: flex;
-      height: 100vh;
-    }
-    .map {
-      flex: 1;
-      position: relative;
-    }
-    iframe {
       width: 100%;
       height: 100%;
-      border: none;
+      background: #2e2e2e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .label {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background-color: rgba(255,255,255,0.85);
-      padding: 8px 16px;
-      font-size: 20px;
-      font-weight: bold;
-      border-radius: 8px;
-      z-index: 10;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 90vw;
+      max-width: 1200px;
+    }
+
+    .widget {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .divider {
+      width: 100%;        /* 與 widget 寬度一致 */
+      height: 2px;        /* 白線粗細一致 */
+      background: #ffffff; /* 白色線條 */
+      margin: 30px 0;     /* 上下間距 */
+    }
+
+    /* 隱藏 weather2 標題與下方白線，如在 HTML 中 */
+    h1, hr {
+      display: none !important;
+    }
+
+    /* 隱藏 widget branding link */
+    a[id$="_u"] {
+      display: none !important;
+    }
+
+    /* 移除 widget 內部底線、邊框、陰影，如有 */
+    .widget * {
+      border-bottom: none !important;
+      box-shadow: none !important;
+    }
+
+    .widget iframe {
+      border: none !important;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <!-- 桃園機場 -->
-    <div class="map">
-      <div class="label">Taoyuan International Airport</div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3623.1721563900054!2d120.96693737559424!3d24.800753650167996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3468358a34fcfd0b%3A0x2b82b33495f0ccf!2zU29sIEhvdGVs!3m2!1d24.80165!2d120.9692!4m5!1s0x34681c4e8988bdc5%3A0xf2e37b987a528f91!2zVGFveXVhbiBJbnRlcm5hdGlvbmFsIEFpcnBvcnQ!3m2!1d25.077083!2d121.23241!5e0!3m2!1sen!2stw!4v1721978052609"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-<!-- 中間白線 -->
+    <!-- 上方白線 -->
     <div class="divider"></div>
 
-    <!-- 松山機場 -->
-    <div class="map">
-      <div class="label">Songshan Airport</div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3623.1721563900054!2d120.96693737559424!3d24.800753650167996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3468358a34fcfd0b%3A0x2b82b33495f0ccf!2zU29sIEhvdGVs!3m2!1d24.80165!2d120.9692!4m5!1s0x3442a974cc125e7f%3A0x1ed08a48f2e47c36!2zU29uZ3NoYW4gQWlycG9ydA!3m2!1d25.069815!2d121.552828!5e0!3m2!1sen!2stw!4v1721980000000"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    <!-- 橫向 weather widget -->
+    <div class="widget" id="ww_a728af039000a" v='1.3' loc='id'
+      a='{
+        "t":"horizontal",
+        "lang":"en",
+        "sl_lpl":1,
+        "ids":["wl9238"],
+        "font":"Arial",
+        "sl_ics":"one_a",
+        "sl_sot":"celsius",
+        "cl_bkg":"#2e2e2e",
+        "cl_font":"#FFFFFF",
+        "cl_cloud":"#FFFFFF",
+        "cl_persp":"#81D4FA",
+        "cl_sun":"#FFC107",
+        "cl_moon":"#FFC107",
+        "cl_thund":"#FF5722"
+      }'>
+      <a href="https://weatherwidget.org/" id="ww_a728af039000a_u" target="_blank">Free weather widget</a>
+    </div>
+
+    <!-- 中間白線 -->
+    <div class="divider"></div>
+
+    <!-- 響應式 weather widget -->
+    <div class="widget" id="ww_ac90862dca38f" v='1.3' loc='id'
+      a='{
+        "t":"responsive",
+        "lang":"en",
+        "sl_lpl":1,
+        "ids":["wl9238"],
+        "font":"Arial",
+        "sl_ics":"one_a",
+        "sl_sot":"celsius",
+        "cl_bkg":"#2e2e2e",
+        "cl_font":"#FFFFFF",
+        "cl_cloud":"#FFFFFF",
+        "cl_persp":"#81D4FA",
+        "cl_sun":"#FFC107",
+        "cl_moon":"#FFC107",
+        "cl_thund":"#FF5722",
+        "cl_odd":"#0000000a"
+      }'>
+      <a href="https://weatherwidget.org/" id="ww_ac90862dca38f_u" target="_blank">Free weather widget</a>
     </div>
   </div>
-</body>
-</html>
-    window.onload = showTaoyuan;
-  </script>
+
+  <!-- widget scripts -->
+  <script async src="https://app3.weatherwidget.org/js/?id=ww_a728af039000a"></script>
+  <script async src="https://app3.weatherwidget.org/js/?id=ww_ac90862dca38f"></script>
+
 </body>
 </html>
