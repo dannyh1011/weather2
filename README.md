@@ -69,7 +69,7 @@
         "t":"horizontal",
         "lang":"en",
         "sl_lpl":1,
-        "ids":["wl9238"],
+        "ids":[],
         "font":"Arial",
         "sl_ics":"one_a",
         "sl_sot":"celsius",
