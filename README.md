@@ -30,23 +30,20 @@
     }
 
     .divider {
-      width: 100%;        /* 與 widget 寬度一致 */
-      height: 2px;        /* 白線粗細一致 */
-      background: #ffffff; /* 白色線條 */
-      margin: 30px 0;     /* 上下間距 */
+      width: 100%;
+      height: 2px;
+      background: #ffffff;
+      margin: 30px 0;
     }
 
-    /* 隱藏 weather2 標題與下方白線，如在 HTML 中 */
     h1, hr {
       display: none !important;
     }
 
-    /* 隱藏 widget branding link */
     a[id$="_u"] {
       display: none !important;
     }
 
-    /* 移除 widget 內部底線、邊框、陰影，如有 */
     .widget * {
       border-bottom: none !important;
       box-shadow: none !important;
@@ -63,17 +60,17 @@
     <!-- 上方白線 -->
     <div class="divider"></div>
 
-    <!-- 橫向 weather widget -->
-    <div class="widget" id="ww_a728af039000a" v='1.3' loc='id'
+    <!-- 新的上方 widget -->
+    <div class="widget" id="ww_ccc8f6867fffd" v='1.3' loc='id'
       a='{
         "t":"horizontal",
         "lang":"en",
         "sl_lpl":1,
-        "ids":[],
+        "ids":["wl9238"],
         "font":"Arial",
-        "sl_ics":"one_a",
+        "sl_ics":"one",
         "sl_sot":"celsius",
-        "cl_bkg":"#2e2e2e",
+        "cl_bkg":"image",
         "cl_font":"#FFFFFF",
         "cl_cloud":"#FFFFFF",
         "cl_persp":"#81D4FA",
@@ -81,13 +78,13 @@
         "cl_moon":"#FFC107",
         "cl_thund":"#FF5722"
       }'>
-      <a href="https://weatherwidget.org/" id="ww_a728af039000a_u" target="_blank">Free weather widget</a>
+      <a href="https://weatherwidget.org/" id="ww_ccc8f6867fffd_u" target="_blank">Html weather widget</a>
     </div>
 
     <!-- 中間白線 -->
     <div class="divider"></div>
 
-    <!-- 響應式 weather widget -->
+    <!-- 下方響應式 widget -->
     <div class="widget" id="ww_ac90862dca38f" v='1.3' loc='id'
       a='{
         "t":"responsive",
@@ -110,8 +107,8 @@
     </div>
   </div>
 
-  <!-- widget scripts -->
-  <script async src="https://app3.weatherwidget.org/js/?id=ww_a728af039000a"></script>
+  <!-- Scripts -->
+  <script async src="https://app3.weatherwidget.org/js/?id=ww_ccc8f6867fffd"></script>
   <script async src="https://app3.weatherwidget.org/js/?id=ww_ac90862dca38f"></script>
 
 </body>
